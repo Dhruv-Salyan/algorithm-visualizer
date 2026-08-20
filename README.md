@@ -115,7 +115,7 @@ on a deployed domain with no configuration changes.
 Requires **Node.js 18+**.
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/Dhruv-Salyan/algorithm-visualizer.git
 cd algo-visualizer
 npm install
 npm start
