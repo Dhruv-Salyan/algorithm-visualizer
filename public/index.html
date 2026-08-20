@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<title>Algorithm Visualizer — Interactive DSA Pattern Explorer</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="/">
+      <span class="brand-mark">&lt;/&gt;</span>
+      Algorithm Visualizer
+    </a>
+    <div class="nav-links">
+      <a href="#patterns">Patterns</a>
+      <a href="#why">Why visualize</a>
+      <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <a class="nav-cta" href="#patterns">Get started</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-glow"></div>
+  <div class="wrap hero-inner">
+    <div>
+      <span class="eyebrow"><span class="dot"></span> DSA SUMMER TRAINING PROJECT</span>
+      <h1>See <span>how the algorithm thinks</span>, one step at a time.</h1>
+      <p class="lead">
+        Four core DSA patterns — Two Pointers, Binary Search, Sliding Window, and Prefix Sum —
+        rendered as step-by-step visual walkthroughs instead of walls of code.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#patterns">
+          Explore patterns
+        </a>
+        <a class="btn btn-ghost" href="visualize.html?algo=binary-search">Try Binary Search</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-visual-label">
+        <span>binary_search.trace</span>
+        <span id="hero-target-label">target = 23</span>
+      </div>
+      <div class="mini-array" id="hero-mini-array"></div>
+      <div class="hero-visual-caption" id="hero-caption">searching for 23…</div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="section" id="patterns">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">01 · THE PATTERNS</span>
+        <h2>Four patterns that show up everywhere</h2>
+        <p>Each card links to a full interactive walkthrough with play, pause, step, and speed controls.</p>
+      </div>
+
+      <div class="card-grid" id="card-grid">
+        <!-- cards injected by js/main.js from /api/algorithms -->
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="why">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">02 · WHY IT HELPS</span>
+        <h2>Why visualize instead of just reading code</h2>
+        <p>Pseudocode tells you what happens. A visualization shows you why it works.</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <span class="num">Intuition</span>
+          <h4>Builds real intuition</h4>
+          <p>Watching pointers converge or a search space shrink makes the invariant behind the algorithm obvious, not just memorized.</p>
+        </div>
+        <div class="why-card">
+          <span class="num">Debugging</span>
+          <h4>Exposes edge cases</h4>
+          <p>Off-by-one errors and boundary conditions are far easier to spot when you can see the exact index a pointer sits on.</p>
+        </div>
+        <div class="why-card">
+          <span class="num">Retention</span>
+          <h4>Sticks in memory longer</h4>
+          <p>A pattern you've watched play out visually is easier to recall in an interview than one you only read once in a textbook.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <span>Algorithm Visualizer · DSA Summer Training Project</span>
+  <span>Built with vanilla JS + Express</span>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

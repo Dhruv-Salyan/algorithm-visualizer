@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<title>Visualize — Algorithm Visualizer</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="/">
+      <span class="brand-mark">&lt;/&gt;</span>
+      Algorithm Visualizer
+    </a>
+    <div class="nav-links">
+      <a href="index.html#patterns">All patterns</a>
+      <a href="index.html#why">Why visualize</a>
+    </div>
+    <a class="nav-cta" href="index.html">← Home</a>
+  </div>
+</nav>
+
+<div class="wrap viz-header">
+  <div class="breadcrumb">
+    <a href="index.html">Patterns</a> <span>/</span> <span id="crumb-name">Loading…</span>
+  </div>
+  <div class="viz-title-row">
+    <div>
+      <h1 id="algo-title">Loading algorithm…</h1>
+      <p class="sub" id="algo-desc"></p>
+    </div>
+    <div class="complexity-badges">
+      <div class="cx-badge"><span class="k">Time</span><span class="v" id="cx-time">—</span></div>
+      <div class="cx-badge"><span class="k">Space</span><span class="v" id="cx-space">—</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap viz-layout">
+
+  <!-- ===== MAIN COLUMN ===== -->
+  <div class="main-col">
+
+    <div class="panel">
+      <div class="panel-title">
+        <span id="stage-label">Visualization</span>
+        <span id="algo-usecase" class="mono" style="color:var(--text-faint); font-size:11px;"></span>
+      </div>
+
+      <div class="stage" id="stage">
+        <!-- algorithm-specific renderer draws into #stage-visual -->
+        <div id="stage-visual" style="width:100%;"></div>
+        <div class="stage-status" id="stage-status">
+          <span class="step-tag" id="step-tag">STEP 0</span>
+          <span id="status-text">Apply an input to begin.</span>
+        </div>
+      </div>
+
+      <div class="controls-row">
+        <button class="ctrl-btn" id="btn-reset" title="Reset">⟲</button>
+        <button class="ctrl-btn" id="btn-prev" title="Previous step">◀</button>
+        <button class="ctrl-btn primary" id="btn-play" title="Play / Pause">
+          <span id="play-icon">▶</span> <span id="play-label">Play</span>
+        </button>
+        <button class="ctrl-btn" id="btn-next" title="Next step">▶</button>
+
+        <div class="speed-control">
+          <span>Speed</span>
+          <input type="range" id="speed-range" min="1" max="4" value="2" step="1" />
+          <span id="speed-label">1×</span>
+        </div>
+      </div>
+
+      <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+      <div class="step-counter" id="step-counter">Step 0 / 0</div>
+    </div>
+
+  </div>
+
+  <!-- ===== SIDEBAR ===== -->
+  <div class="sidebar">
+
+    <div class="panel">
+      <div class="panel-title">Input</div>
+      <div class="preset-row" id="preset-row"></div>
+      <form id="input-form"></form>
+    </div>
+
+    <div class="panel">
+      <div class="panel-title">About this pattern</div>
+      <dl class="info-list" id="info-list"></dl>
+    </div>
+
+    <div class="panel">
+      <div class="panel-title">Legend</div>
+      <div class="legend" id="legend"></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-title">Pseudocode</div>
+      <div class="code-block" id="pseudocode"></div>
+    </div>
+
+  </div>
+</div>
+
+<script src="js/visualize/utils.js"></script>
+<script src="js/visualize/renderer.js"></script>
+<script src="js/visualize/algorithms/twoPointers.js"></script>
+<script src="js/visualize/algorithms/binarySearch.js"></script>
+<script src="js/visualize/algorithms/slidingWindow.js"></script>
+<script src="js/visualize/algorithms/prefixSum.js"></script>
+<script src="js/visualize/app.js"></script>
+</body>
+</html>

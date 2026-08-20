@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Environment variables (none are required by this project, but ignored
+# defensively in case a local .env is ever added for development)
+.env
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+
+# Build/test artifacts
+coverage/
+dist/
+build/
