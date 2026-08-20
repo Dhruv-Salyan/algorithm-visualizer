@@ -178,7 +178,7 @@ step required.
 5. Click **Create Web Service**. Render builds and deploys automatically, and
    redeploys on every push to the connected branch.
 6. Once deployed, Render gives you a public URL like
-   `https://algorithm-visualizer.onrender.com` — open it and the app should
+   `https://algorithm-visualizer-kbqw.onrender.com` — open it and the app should
    work exactly as it does locally.
 
 ### Option B — One-click Blueprint
